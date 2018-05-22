@@ -1,5 +1,102 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input,
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  outline: none;
+}
+
+.TodoApp {
+  max-width: 500px;
+  margin: 1em auto;
+  border: 1px solid #ddd;
+}
+
+.AddNewTodoForm,
+.TodoItem {
+  display: flex;
+  font-size: 1.5em;
+}
+
+.AddNewTodoForm {
+  border-bottom: 1px solid #ddd;
+}
+
+.AddNewTodoForm input,
+.TodoItem p {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0.5em 0.7em;
+  outline: none;
+  color: #333;
+}
+
+.AddNewTodoForm input {
+  border-right: 1px solid #ddd;
+}
+
+.AddNewTodoForm button,
+.TodoItem button,
+.TodoDoneCheckbox {
+  padding: 0.3em 0.5em;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.AddNewTodoForm button {
+  color: #8b8;
+}
+
+.AddNewTodoForm button:hover {
+  color: #696;
+}
+
+.TodoList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.TodoItem {
+  display: flex;
+}
+
+.TodoDoneCheckbox input {
+  display: none;
+}
+
+.TodoDoneCheckbox span {
+  color: #ded;
+  transition: color 0.2s;
+}
+
+.TodoDoneCheckbox:hover span {
+  color: #cdc;
+}
+
+.TodoDoneCheckbox input:checked ~ span {
+  color: #7a7;
+}
+
+.TodoItem p {
+  margin: 0;
+  padding: 0.8em 0.2em;
+  font-size: 0.8em;
+}
+
+.TodoItem button {
+  padding: 0.7em 1.1em;
+  font-size: 0.8em;
+  color: #f77;
+}
+
+.TodoItem button:hover {
+  color: #a33;
 }
