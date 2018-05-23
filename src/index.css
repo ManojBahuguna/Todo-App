@@ -29,7 +29,7 @@ button {
 }
 
 .AddNewTodoForm input,
-.TodoItem p {
+.TodoText {
   flex-grow: 1;
   margin: 0;
   padding: 0.5em 0.7em;
@@ -42,7 +42,7 @@ button {
 }
 
 .AddNewTodoForm button,
-.TodoItem button,
+.TodoRemoveButton,
 .TodoDoneCheckbox {
   padding: 0.3em 0.5em;
   font-size: 1.3em;
@@ -68,35 +68,31 @@ button {
   display: flex;
 }
 
-.TodoDoneCheckbox input {
-  display: none;
-}
-
-.TodoDoneCheckbox span {
+.TodoDoneCheckbox {
   color: #ded;
   transition: color 0.2s;
 }
 
-.TodoDoneCheckbox:hover span {
+.TodoDoneCheckbox:hover {
   color: #cdc;
 }
 
-.TodoDoneCheckbox input:checked ~ span {
+.TodoItem.isDone .TodoDoneCheckbox {
   color: #7a7;
 }
 
-.TodoItem p {
+.TodoText {
   margin: 0;
   padding: 0.8em 0.2em;
   font-size: 0.8em;
 }
 
-.TodoItem button {
+.TodoRemoveButton {
   padding: 0.7em 1.1em;
   font-size: 0.8em;
   color: #f77;
 }
 
-.TodoItem button:hover {
+.TodoRemoveButton:hover {
   color: #a33;
 }
