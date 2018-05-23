@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { toggleTodo } from '../actions';
+import { toggleTodo, removeTodo } from '../actions';
 import Icon from '@fortawesome/react-fontawesome';
 import {
   faCheckCircle as checkIcon,
@@ -14,6 +14,11 @@ class TodoItem extends Component {
     this.props.dispatch(toggleTodo(id));
   };
 
+  handleTodoRemove = () => {
+    const id = this.props.todo.id;
+    this.props.dispatch(removeTodo(id));
+  }
+
   render() {
     const { text, isDone } = this.props.todo;
     return (
@@ -24,7 +29,7 @@ class TodoItem extends Component {
 
         <p className="TodoText">{text}</p>
 
-        <button className="TodoRemoveButton">
+        <button onClick={this.handleTodoRemove} className="TodoRemoveButton">
           <Icon icon={removeIcon} />
         </button>
       </li>
