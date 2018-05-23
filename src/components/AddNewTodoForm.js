@@ -19,7 +19,7 @@ class AddNewTodoForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    const text = this.state.input;
+    const text = this.state.input.trim();
     if (text.length === 0)
       return;
 
