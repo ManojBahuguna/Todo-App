@@ -13,9 +13,15 @@ button {
 }
 
 .TodoApp {
-  max-width: 700px;
-  margin: 2em;
+  max-width: 600px;
+  margin: auto;
   border: 1px solid #ddd;
+}
+
+@media (min-width: 620px) {
+  .TodoApp {
+    margin: 2em auto;
+  }
 }
 
 .AddNewTodoForm,
@@ -39,6 +45,7 @@ button {
 
 .AddNewTodoForm input {
   border-right: 1px solid #ddd;
+  min-width: 5em;
 }
 
 .AddNewTodoForm button,
