@@ -100,3 +100,9 @@ button {
 .TodoRemoveButton:hover {
   color: #a33;
 }
+
+.EmptyTodoMessage {
+  padding: 0 1em;
+  color: #a33;
+  font-size: 1.3em;
+}
